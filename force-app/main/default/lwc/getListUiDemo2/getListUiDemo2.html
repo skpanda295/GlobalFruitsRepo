@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="WireListViewToken">
+        <table>
+            <thead>
+                <tr>
+                    <th>List Id</th>
+                    <th>List Api Name</th>
+                    <th>List Label</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template if:true={records}>
+                    <!-- <div class="slds-m-around_medium"> -->
+                        <template for:each={records} for:item="record">
+                            <tr key={record.id}>
+                                <td>{record.id}</td>
+                                <td>{record.apiName}</td>
+                                <td>{record.label}</td>
+                                <!-- {record.apiName.value} -->
+                            </tr>
+                        </template>
+                    <!-- </div> -->
+                </template>
+            </tbody>
+        </table>
+         <div class="slds-grid">
+            <div class="slds-m-around_medium">
+                <lightning-button label="Previous" onclick={handlePreviousPage}></lightning-button>
+            </div>
+            <div class="slds-m-around_medium slds-col_bump-left">
+                <lightning-button label="Next" onclick={handleNextPage}></lightning-button>
+              </div>
+
+             </div> 
+    </lightning-card>
+</template>
