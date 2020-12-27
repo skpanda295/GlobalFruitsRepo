@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  title="get record create defaults demo" icon-name="standard:account">
+        <table>
+            <thead>
+                <template for:each={tableHeader}  for:item="record">
+                        <th key={record}>{record}</th>
+                </template>
+            </thead>
+            <tbody>
+                <template for:each={tableBody} for:item="item">
+                    <tr key={item.apiName}>
+                        <td>{item.apiName}</td>
+                        <td>{item.dataType}</td>
+                        <td>{item.label}</td>
+                        <td>{item.length}</td>
+                        <td>{item.required}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>
