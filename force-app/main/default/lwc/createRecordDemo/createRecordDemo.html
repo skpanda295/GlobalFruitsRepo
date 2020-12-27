@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  title="Create record with uiRecordApi Demp" icon-name="standard:account">
+        <div class='slds-m-around--xx-large'>
+            <lightning-input label="Enter the name" name="Name" value={formFields.Name} type="text" 
+            onchange={changeHandler}></lightning-input>
+            <lightning-input label="Enter the Phone" name="Phone" value={formFields.Phone} type="Phone" 
+            onchange={changeHandler}></lightning-input>
+            <lightning-input label="Enter the Industry" name="Industry" value={formFields.Industry} type="text" 
+            onchange={changeHandler}></lightning-input>
+            <lightning-input label="Enter the Type" name="Type" value={formFields.Type} type="text" 
+            onchange={changeHandler}></lightning-input>
+        </div>
+        <lightning-button label="Submit" onclick={handleSave} variant="brand" ></lightning-button>
+    </lightning-card>
+    
+    
+</template> 
